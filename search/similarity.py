@@ -9,7 +9,7 @@ def search_similar_vectors(
     client: QdrantClient,
     collection_name: str,
     query_vector: List[float],
-    limit: int = 1
+    limit: int = 5
 ):
     """
     Search for similar vectors in a collection.
