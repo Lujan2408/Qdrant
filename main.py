@@ -51,3 +51,15 @@ client.upsert(
 # retrieve collection details
 collection_info = client.get_collection(collection_name)
 print(f"Collection info:", collection_info)
+
+# Similarity search 
+
+query_vector = [0.08, 0.14, 0.33, 0.28]
+
+search_results = client.query_points(
+  collection_name = collection_name,
+  query = query_vector,
+  limit = 1 # Return the top 1 most similar vector
+)
+
+print("Search results:", search_results)
